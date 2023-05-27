@@ -1,0 +1,31 @@
+<ng-container *ngIf="selectedBreed">
+  <!-- Add Modal here  -->
+  <div class="modal-overlay"></div>
+  <div class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">{{ selectedBreed.name }}</h4>
+        <button type="button" class="close" (click)="onCloseModal()">×</button>
+      </div>
+
+      <!-- Add Modal Body here -->
+      <div class="modal-body">
+        <div>
+          <strong>Weight:</strong> <span>{{ selectedBreed.weight }}</span>
+        </div>
+        <div>
+          <strong>Height:</strong> <span>{{ selectedBreed.height }}</span>
+        </div>
+        <div>
+          <strong>Life Span:</strong> <span>{{ selectedBreed.life_span }}</span>
+        </div>
+        <div>
+          <strong>Bred For:</strong> <span>{{ selectedBreed.bred_for }}</span>
+        </div>
+        <div>
+          <strong>Breed Group:</strong> <span>{{ selectedBreed.breed_group }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

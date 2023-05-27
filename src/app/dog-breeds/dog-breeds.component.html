@@ -1,0 +1,29 @@
+<!-- Navigation link -->
+<nav class="navbar">
+  <a class="navbar-brand" href="#">Dog Breed App</a>
+  <a class="navbar-link" href="#">Dog Breeds</a>
+  <a class="navbar-link" href="#">Blog</a>
+  <a class="navbar-link" href="#">Contact Us</a>
+</nav>
+
+<!-- Main heading -->
+<div class="center-container">
+  <h1>DOG BREEDS</h1>
+  <p class="browse-text">Explore our extensive collection of dog breeds through the search bar. Simply click on the
+    dog's image to discover a brief bio for each breed.</p>
+  <app-search-bar (searchEvent)="filterBreeds($event)"></app-search-bar>
+</div>
+
+<div class="breed-container">
+  <div class="breed-card" *ngFor="let breed of filteredBreeds">
+    <img [src]="breed.image" alt="{{ breed.name }}" class="breed-image" (click)="openModal(breed)">
+    <div class="breed-name">{{ breed.name }}</div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>&copy; 2023 Sevda Seyidova. All rights reserved.</p>
+</div>
+
+<!-- Modal component -->
+<app-modal [selectedBreed]="selectedBreed" (closeModal)="closeModal()" *ngIf="selectedBreed"></app-modal>

@@ -1,27 +1,52 @@
-# DogBreedsApp
+# DogBreedsapp
+App that allows users to explore a wide variety of dog breeds.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+## Links
 
-## Development server
+Deployed at: 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Description 
 
-## Code scaffolding
+The Dog Breed Explorer is an Angular application that allows users to explore a wide variety of dog breeds. Powered by the DogAPi, it provides access to a vast collection of dog breed information.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Key features:
 
-## Build
+- Browse and search through an extensive collection of dog breeds.
+- Click on a dog's image to access a brief bio and key details about each breed.
+- Enjoy a visually appealing design that enhances the browsing experience.
+- The Dog Breed App leverages the DogAPI, which serves as a reliable source of up-to-date and comprehensive dog breed data. From breed characteristics to images, the app offers a rich and informative experience for dog enthusiasts and those seeking to learn more about different breeds.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Table of Contents (Optional)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* [Installation]
+* [Usage]
+* [License]
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Installation
 
-## Further help
+1. Clone the repository to your local machine.
+2. Install the required dependencies using npm install.
+3. Start the app using ng serve.
+4. Open your browser and navigate to http://localhost:3000
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Usage 
+
+- Screeshot of the Web Page:
+
+![screenshot of page](public/images/Screenshot1.png)
+![screenshot of page](public/images/Screenshot2.png)
+![screenshot of page](public/images/Screenshot3.png)
+
+
+## Future Directions 
+
+- User Authentication: Implement user authentication and authorization features to allow users to create accounts, save their favorite breeds, and personalize their experience.
+- Mobile Application: Develop a mobile version of the app for iOS and Android devices, providing a seamless user experience on smartphones and tablets.
+- Advanced Search Options: Enhance the search functionality by adding advanced filtering options such as size, temperament, activity level, or specific breed characteristics.
+- User Reviews and Ratings: Allow users to provide reviews and ratings for different dog breeds, providing valuable insights for other users who are researching breeds.
+
+## License
+
+Please refer to the LICENSE in the repo.
