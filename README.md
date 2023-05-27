@@ -35,9 +35,8 @@ Key features:
 
 - Screeshot of the Web Page:
 
-![screenshot of page](public/images/Screenshot1.png)
-![screenshot of page](public/images/Screenshot2.png)
-![screenshot of page](public/images/Screenshot3.png)
+![screenshot of page](./src/assets/Screenshot1.png)
+![screenshot of page](./src/assets/Screenshot2.png)
 
 
 ## Future Directions 
