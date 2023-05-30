@@ -114,33 +114,40 @@ export class DogBreedsComponent implements OnInit {
     this.selectedBreed = null;
   }
 
-async filterBreeds(searchTerm: string): Promise<void> {
-  if (searchTerm.trim() === '') {
-    this.filteredBreeds = this.breeds.slice(0, 10); // Show the first 10 breeds if search term is empty
-  } else {
-    try {
-      // Fetch breeds based on the search term from the API
-      const response = await axios.get(`${this.endpoint}/breeds/search?q=${searchTerm}`, {
-        headers: {
-          'x-api-key': this.apiKey
-        }
-      });
+  async filterBreeds(searchTerm: string): Promise<void> {
+    if (searchTerm.trim() === '') {
+      this.filteredBreeds = this.breeds.slice(0, 10); // Show the first 10 breeds if search term is empty
+    } else {
+      try {
+        // Fetch breeds based on the search term from the API
+        const response = await axios.get(`${this.endpoint}/breeds/search?q=${searchTerm}`, {
+          headers: {
+            'x-api-key': this.apiKey
+          }
+        });
 
-        // Map the response data to Breed objects and initialize the breed properties
-        this.filteredBreeds = response.data.map((breed: any) => ({
-          id: breed.id,
-          name: breed.name,
-          image: '',
-          weight: '',
-          height: '',
-          life_span: '',
-          bred_for: '',
-          breed_group: ''
-        }));
-      } catch (error) {
-        console.error('Failed to fetch breeds.');
-        this.filteredBreeds = [];
+         // Map the response data to Breed objects and initialize the breed properties
+      const filteredBreeds = response.data.map((breed: any) => ({
+        id: breed.id,
+        name: breed.name,
+        image: '',
+        weight: '',
+        height: '',
+        life_span: '',
+        bred_for: '',
+        breed_group: ''
+      }));
+
+      // Fetch image and details for each filtered breed
+      for (const breed of filteredBreeds) {
+        await this.fetchBreedImage(breed);
+        await this.fetchBreedDetails(breed);
       }
+
+      this.filteredBreeds = filteredBreeds;
+    } catch (error) {
+      console.error('Failed to fetch breeds.');
+      this.filteredBreeds = [];
     }
   }
-}  
+  }}

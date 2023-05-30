@@ -15,10 +15,10 @@ export class ModalComponent {
 
   async fetchBreedDetails(breed: Breed): Promise<void> {
     try {
-      const response = await axios.get(`{{endpoint}}/breeds/${breed.id}`, {
+      const response = await axios.get(`https://api.thedogapi.com/v1/breeds/${breed.id}`, {
         headers: {
           'Content-Type': 'application/json',
-          'x-api-key': '{{apiKey}}'
+          'x-api-key': 'live_WRCzcNpoWUhxO7orPHuVfdKoGaNPMUpnpdRi1kfsmssNJ1NCqvUJ14ew0UsiN358'
         }
       });
       const breedData = response.data;
