@@ -20,7 +20,7 @@ export class ModalComponent {
           'Content-Type': 'application/json',
           'x-api-key': 'live_WRCzcNpoWUhxO7orPHuVfdKoGaNPMUpnpdRi1kfsmssNJ1NCqvUJ14ew0UsiN358'
         }
-      });
+      }); 
       const breedData = response.data;
 
       // Update the breed object with fetched details

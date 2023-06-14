@@ -1,7 +1,7 @@
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   margin: 0;
-  background-color: whitesmoke;
+position: relative;
 }
 
 .navbar {
@@ -88,6 +88,7 @@ label {
 .breed-container {
   display: flex;
   flex-wrap: wrap;
+
 }
 
 .breed-card {
@@ -116,6 +117,7 @@ label {
   padding-top: 50px;
   padding-bottom: 20px;
   text-align: center;
+  color: black;
 }
 
 .center-container {
@@ -123,6 +125,10 @@ label {
   padding-top: 10px;
   padding-bottom: 20px;
   margin-bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 50%; /* Position it in the middle vertically */
+  left: 50%; /* Position it in the middle horizontally */
+  
 }
 
 .breed-container {
@@ -143,9 +149,10 @@ label {
 .browse-text {
   padding-bottom: 20px;
   text-align: center;
-  font-size: 18px;
+  font-size: 25px;
   color: black;
   margin-bottom: 20px;
+  
 }
 
 .search-bar {

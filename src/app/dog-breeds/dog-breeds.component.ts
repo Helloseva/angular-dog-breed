@@ -12,6 +12,7 @@ export interface Breed {
   breed_group: string;
 }
 
+// used to define the metadata
 @Component({
   selector: 'app-dog-breeds',
   templateUrl: './dog-breeds.component.html',
@@ -28,8 +29,9 @@ export class DogBreedsComponent implements OnInit {
   endpoint: string = 'https://api.thedogapi.com/v1';
   apiKey: string = 'live_WRCzcNpoWUhxO7orPHuVfdKoGaNPMUpnpdRi1kfsmssNJ1NCqvUJ14ew0UsiN358';
 
-  constructor() { }
+  //constructor() { } no additional initialization added so remove later
 
+  //initialize the component
   async ngOnInit() {
     this.loading = true;
     this.error = '';
